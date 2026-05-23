@@ -16,6 +16,9 @@ import * as path from "path";
 import * as crypto from "crypto";
 import { pipeline } from "stream/promises";
 import { createWriteStream } from "fs";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const PANDOC_VERSION = "3.6.4";
 

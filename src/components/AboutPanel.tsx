@@ -132,7 +132,7 @@ export default function AboutPanel() {
                 </p>
               </div>
               <div className="flex items-center gap-1.5">
-                <ExternalLink href="https:
+                <ExternalLink href="https://github.com/TheHolyOneZ">
                   <Github size={11} /> GitHub
                 </ExternalLink>
                 <ExternalLink href="https://zsync.eu">

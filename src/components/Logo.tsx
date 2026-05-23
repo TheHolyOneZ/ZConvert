@@ -1,4 +1,4 @@
-import logoSrc from "../assets/logo.png";
+import logoSrc from "../../src-tauri/icons/128x128.png";
 
 interface Props {
   size?: number;
