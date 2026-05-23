@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-accent:       #6366f1;
+  --color-accent-dim:   rgba(99, 102, 241, 0.18);
+  --color-accent-glow:  rgba(99, 102, 241, 0.35);
+
+  --color-bg:           #07070f;
+  --color-panel:        rgba(255, 255, 255, 0.048);
+  --color-panel-hover:  rgba(255, 255, 255, 0.075);
+  --color-panel-strong: rgba(255, 255, 255, 0.09);
+  --color-border:       rgba(255, 255, 255, 0.08);
+  --color-border-light: rgba(255, 255, 255, 0.05);
+
+  --color-text:         rgba(255, 255, 255, 0.92);
+  --color-text-muted:   rgba(255, 255, 255, 0.50);
+  --color-text-subtle:  rgba(255, 255, 255, 0.28);
+
+  --color-success:      #22c55e;
+  --color-error:        #f87171;
+  --color-warning:      #fbbf24;
+
+  --font-sans:          "Inter", "system-ui", sans-serif;
+}
+
+
+@media (prefers-color-scheme: light) {
+  @theme {
+    --color-bg:           #eeeef8;
+    --color-panel:        rgba(255, 255, 255, 0.55);
+    --color-panel-hover:  rgba(255, 255, 255, 0.72);
+    --color-panel-strong: rgba(255, 255, 255, 0.78);
+    --color-border:       rgba(0, 0, 0, 0.08);
+    --color-border-light: rgba(0, 0, 0, 0.04);
+    --color-text:         rgba(10, 10, 20, 0.92);
+    --color-text-muted:   rgba(10, 10, 20, 0.50);
+    --color-text-subtle:  rgba(10, 10, 20, 0.28);
+  }
+}
+
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  position: relative;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 55% at -5%  5%,  rgba(99, 102, 241, 0.28) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 55% at 105% 95%, rgba(139, 92, 246, 0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at  55% 25%, rgba(59, 130, 246, 0.10) 0%, transparent 55%);
+}
+
+@media (prefers-color-scheme: light) {
+  body::before {
+    background:
+      radial-gradient(ellipse 65% 55% at -5%  5%,  rgba(99, 102, 241, 0.14) 0%, transparent 65%),
+      radial-gradient(ellipse 55% 55% at 105% 95%, rgba(139, 92, 246, 0.10) 0%, transparent 65%);
+  }
+}
+
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
