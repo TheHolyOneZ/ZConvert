@@ -10,6 +10,10 @@
 
 ---
 
+![ZConvert screenshot](image.png)
+
+---
+
 ## What it does
 
 Drop files in. Pick output formats per file. Convert. That's it.
